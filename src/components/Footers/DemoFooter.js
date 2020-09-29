@@ -11,26 +11,23 @@ function DemoFooter() {
           <nav className="footer-nav ">
             <ul>
               <li>
-                <a href="" target="_blank">
-                  <i className="fa fa-facebook fa-2x" />
+                <a href="mailto:bitsandbytes.in@gmail.com" target="_blank">
+                  <i className="fa fa-envelope-o fa-2x" />
                 </a>
               </li>
               <li>
-                <a href="" target="_blank">
+                <a
+                  href="https://www.instagram.com/bitsandbytes.in/"
+                  target="_blank"
+                >
                   <i className="fa fa-instagram fa-2x" />
-                </a>
-              </li>
-              <li>
-                <a href="" target="_blank">
-                  <i className="fa fa-twitter fa-2x" />
                 </a>
               </li>
             </ul>
           </nav>
           <div className="credits ml-auto">
             <span className="copyright">
-              © {new Date().getFullYear()}, made with{" "}
-              <i className="fa fa-heart heart" /> for You.
+              © {new Date().getFullYear()}, Bits & Bytes
             </span>
           </div>
         </Row>
