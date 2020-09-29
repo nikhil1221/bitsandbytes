@@ -16,7 +16,10 @@ function DemoFooter() {
                 </a>
               </li>
               <li>
-                <a href="" target="_blank">
+                <a
+                  href="https://instagram.com/bitsandbytes.in?igshid=f7bhunq9vowl"
+                  target="_blank"
+                >
                   <i className="fa fa-instagram fa-2x" />
                 </a>
               </li>

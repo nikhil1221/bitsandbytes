@@ -58,6 +58,7 @@ function ExamplesNavbar() {
             title="Company name"
             tag={Link}
           >
+            {/* <img src={require("assets/img/logo/full.png")} /> */}
             BITS & BYTES
           </NavbarBrand>
           <button
