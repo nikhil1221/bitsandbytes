@@ -26,8 +26,9 @@ function DemoFooter() {
             </ul>
           </nav>
           <div className="credits ml-auto">
-            <span className="copyright">
-              © {new Date().getFullYear()}, Bits & Bytes
+            <span>
+              © {new Date().getFullYear()}, by Bits & Bytes with{" "}
+              <i className="fa fa-heart heart" /> for You.
             </span>
           </div>
         </Row>

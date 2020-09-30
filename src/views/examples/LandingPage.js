@@ -228,7 +228,7 @@ function LandingPage() {
                     <Button
                       className="btn-just-icon btn-neutral ml-1"
                       color="link"
-                      href="mailto: ekas10000@gmail.com"
+                      href="mailto: Yodhinaggarwal@gmail.com"
                     >
                       <i className="fa fa-envelope-o" />
                     </Button>
