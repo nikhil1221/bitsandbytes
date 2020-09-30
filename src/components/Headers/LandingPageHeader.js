@@ -66,8 +66,11 @@ function LandingPageHeader() {
         <div className="filter" />
         <Container>
           <div className="motto text-center">
-            <h1>What's Trending?</h1>
-            <h3></h3>
+            <h1>Bits & Bytes.</h1>
+            <h3>
+              Trying to motivate and inspire everyone we come across, by
+              presenting some of the real influencers among us.
+            </h3>
             <br />
             {/* <Button
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -79,7 +82,7 @@ function LandingPageHeader() {
               <i className="fa fa-play" />
               Watch video
             </Button> */}
-            <Button
+            {/* <Button
               className="btn-round"
               style={{
                 borderRadius: "50%",
@@ -94,7 +97,7 @@ function LandingPageHeader() {
               <div>
                 <i className="nc-icon nc-minimal-down" size="4x" />
               </div>
-            </Button>
+            </Button> */}
           </div>
         </Container>
       </div>
