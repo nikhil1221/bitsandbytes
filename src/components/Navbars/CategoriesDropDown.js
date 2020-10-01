@@ -20,26 +20,46 @@ function CategoriesDropDown() {
           style={{ border: "none" }}
         >
           <i className="fa fa-list-alt" />
-          &nbsp Categories
+          <span> </span>
+          Categories
         </DropdownToggle>
         <DropdownMenu aria-labelledby="dropdownMenuButton">
-          <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+          <DropdownItem
+            href="/travel-places"
+            // onClick={(e) => e.preventDefault()}
+          >
+            Travel & Places
+          </DropdownItem>
+          <DropdownItem
+            href="/fashion-style"
+            // onClick={(e) => e.preventDefault()}
+          >
+            Fashion & Style
+          </DropdownItem>
+          <DropdownItem
+            href="/art"
+            // onClick={(e) => e.preventDefault()}
+          >
             Art
           </DropdownItem>
-          <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-            Current & Affairs
-          </DropdownItem>
-          <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+          <DropdownItem
+            href="/entertainment"
+            // onClick={(e) => e.preventDefault()}
+          >
             Entertainment
           </DropdownItem>
-          <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-            Fashion
+          <DropdownItem
+            href="/current-affairs"
+            // onClick={(e) => e.preventDefault()}
+          >
+            Current Affairs
           </DropdownItem>
-          <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+
+          <DropdownItem
+            href="/health-fitness"
+            // onClick={(e) => e.preventDefault()}
+          >
             Heath & Fitness
-          </DropdownItem>
-          <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-            Travel
           </DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>
