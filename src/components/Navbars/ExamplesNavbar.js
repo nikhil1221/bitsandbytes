@@ -12,6 +12,7 @@ import {
   Nav,
   Container,
 } from "reactstrap";
+import CategoriesDropDown from "./CategoriesDropDown";
 
 function ExamplesNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
@@ -89,15 +90,9 @@ function ExamplesNavbar() {
                 <i className="fa fa-history" /> Recent
               </NavLink>
             </NavItem>
+
             <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href=""
-                target="_blank"
-                title="Explore more categories"
-              >
-                <i className="fa fa-list-alt" /> Categories
-              </NavLink>
+              <CategoriesDropDown />
             </NavItem>
             <NavItem>
               <NavLink

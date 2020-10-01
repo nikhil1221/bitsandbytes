@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+//animation library react reveal
+import Fade from "react-reveal/Fade";
+import Pulse from "react-reveal/Pulse";
+
 // reactstrap components
 import {
   Button,
@@ -32,7 +36,6 @@ function LandingPage() {
   });
 
   const [expand, setExpand] = useState(false);
-
   const allMembers = () => {
     setExpand(!expand);
   };
@@ -109,7 +112,10 @@ function LandingPage() {
         {/* Our Team Section */}
         <div className="section section-dark text-center">
           <Container>
-            <h2 className="title">Our Team</h2>
+            <Pulse>
+              <h2 className="title">Our Team</h2>
+            </Pulse>
+
             <Row>
               <Col md="3">
                 <Card className="card-profile card-plain">
@@ -243,189 +249,191 @@ function LandingPage() {
               </Col>
             </Row>
 
-            {/* Row2 */}
-            {expand ? (
-              <Row>
-                <Col md="3">
-                  <Card className="card-profile card-plain">
-                    <div className="card-avatar">
-                      <img
-                        alt="..."
-                        src={require("assets/teamImages/Vanshika.jpg")}
-                      />
-                    </div>
-                    <CardBody>
-                      <div className="author">
-                        <CardTitle tag="h4">Vanshika Bajwa</CardTitle>
-                        <h6 className="card-category">Sales Manager</h6>
+            <Fade top collapse when={expand}>
+              <>
+                {/* Row2 */}(
+                <Row>
+                  <Col md="3">
+                    <Card className="card-profile card-plain">
+                      <div className="card-avatar">
+                        <img
+                          alt="..."
+                          src={require("assets/teamImages/Vanshika.jpg")}
+                        />
                       </div>
-                    </CardBody>
-                    <CardFooter className="text-center">
-                      <Button
-                        className="btn-just-icon btn-neutral ml-1"
-                        color="link"
-                        href="https://www.instagram.com/vanshikabajwa_/"
-                      >
-                        <i className="fa fa-instagram" />
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </Col>
-                <Col md="3">
-                  <Card className="card-profile card-plain">
-                    <div className="card-avatar">
-                      <img
-                        alt="..."
-                        src={require("assets/teamImages/AseesPreet.jpg")}
-                      />
-                    </div>
-                    <CardBody>
-                      <div className="author">
-                        <CardTitle tag="h4">Aseespreet Singh</CardTitle>
-                        <h6 className="card-category">Graphic Designer</h6>
+                      <CardBody>
+                        <div className="author">
+                          <CardTitle tag="h4">Vanshika Bajwa</CardTitle>
+                          <h6 className="card-category">Sales Manager</h6>
+                        </div>
+                      </CardBody>
+                      <CardFooter className="text-center">
+                        <Button
+                          className="btn-just-icon btn-neutral ml-1"
+                          color="link"
+                          href="https://www.instagram.com/vanshikabajwa_/"
+                        >
+                          <i className="fa fa-instagram" />
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </Col>
+                  <Col md="3">
+                    <Card className="card-profile card-plain">
+                      <div className="card-avatar">
+                        <img
+                          alt="..."
+                          src={require("assets/teamImages/AseesPreet.jpg")}
+                        />
                       </div>
-                    </CardBody>
-                    <CardFooter className="text-center">
-                      <Button
-                        className="btn-just-icon btn-neutral ml-1"
-                        color="link"
-                        href="https://www.instagram.com/asees66/"
-                      >
-                        <i className="fa fa-instagram" />
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </Col>
-                <Col md="3">
-                  <Card className="card-profile card-plain">
-                    <div className="card-avatar">
-                      <img
-                        alt="..."
-                        src={require("assets/teamImages/Deepanshi.jpg")}
-                      />
-                    </div>
-                    <CardBody>
-                      <div className="author">
-                        <CardTitle tag="h4">Deepanshi Sharma</CardTitle>
-                        <h6 className="card-category">Content Writer</h6>
+                      <CardBody>
+                        <div className="author">
+                          <CardTitle tag="h4">Aseespreet Singh</CardTitle>
+                          <h6 className="card-category">Graphic Designer</h6>
+                        </div>
+                      </CardBody>
+                      <CardFooter className="text-center">
+                        <Button
+                          className="btn-just-icon btn-neutral ml-1"
+                          color="link"
+                          href="https://www.instagram.com/asees66/"
+                        >
+                          <i className="fa fa-instagram" />
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </Col>
+                  <Col md="3">
+                    <Card className="card-profile card-plain">
+                      <div className="card-avatar">
+                        <img
+                          alt="..."
+                          src={require("assets/teamImages/Deepanshi.jpg")}
+                        />
                       </div>
-                    </CardBody>
-                    <CardFooter className="text-center">
-                      <Button
-                        className="btn-just-icon btn-neutral ml-1"
-                        color="link"
-                        href="https://www.instagram.com/deepanshi._.sharma/"
-                      >
-                        <i className="fa fa-instagram" />
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </Col>
-                <Col md="3">
-                  <Card className="card-profile card-plain">
-                    <div className="card-avatar">
-                      <img
-                        alt="..."
-                        src={require("assets/teamImages/Srijana.jpg")}
-                      />
-                    </div>
-                    <CardBody>
-                      <div className="author">
-                        <CardTitle tag="h4">Sirjana Virk</CardTitle>
-                        <h6 className="card-category">Content Writer</h6>
+                      <CardBody>
+                        <div className="author">
+                          <CardTitle tag="h4">Deepanshi Sharma</CardTitle>
+                          <h6 className="card-category">Content Writer</h6>
+                        </div>
+                      </CardBody>
+                      <CardFooter className="text-center">
+                        <Button
+                          className="btn-just-icon btn-neutral ml-1"
+                          color="link"
+                          href="https://www.instagram.com/deepanshi._.sharma/"
+                        >
+                          <i className="fa fa-instagram" />
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </Col>
+                  <Col md="3">
+                    <Card className="card-profile card-plain">
+                      <div className="card-avatar">
+                        <img
+                          alt="..."
+                          src={require("assets/teamImages/Srijana.jpg")}
+                        />
                       </div>
-                    </CardBody>
-                    <CardFooter className="text-center">
-                      <Button
-                        className="btn-just-icon btn-neutral ml-1"
-                        color="link"
-                        href="https://www.instagram.com/_sirjana_virk_/"
-                      >
-                        <i className="fa fa-instagram" />
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </Col>
+                      <CardBody>
+                        <div className="author">
+                          <CardTitle tag="h4">Sirjana Virk</CardTitle>
+                          <h6 className="card-category">Content Writer</h6>
+                        </div>
+                      </CardBody>
+                      <CardFooter className="text-center">
+                        <Button
+                          className="btn-just-icon btn-neutral ml-1"
+                          color="link"
+                          href="https://www.instagram.com/_sirjana_virk_/"
+                        >
+                          <i className="fa fa-instagram" />
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </Col>
 
-                {/* Row 3 */}
-                <Col md="3">
-                  <Card className="card-profile card-plain">
-                    <div className="card-avatar">
-                      <img
-                        alt="..."
-                        src={require("assets/teamImages/Simran.jpg")}
-                      />
-                    </div>
-                    <CardBody>
-                      <div className="author">
-                        <CardTitle tag="h4">Simran Sohi</CardTitle>
-                        <h6 className="card-category">Content Writer</h6>
+                  {/* Row 3 */}
+                  <Col md="3">
+                    <Card className="card-profile card-plain">
+                      <div className="card-avatar">
+                        <img
+                          alt="..."
+                          src={require("assets/teamImages/Simran.jpg")}
+                        />
                       </div>
-                    </CardBody>
-                    <CardFooter className="text-center">
-                      <Button
-                        className="btn-just-icon btn-neutral ml-1"
-                        color="link"
-                        href="https://www.instagram.com/sylhet.xo/"
-                      >
-                        <i className="fa fa-instagram" />
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </Col>
-                <Col md="3">
-                  <Card className="card-profile card-plain">
-                    <div className="card-avatar">
-                      <img
-                        alt="..."
-                        src={require("assets/teamImages/Sahil Mittal.jpg")}
-                      />
-                    </div>
-                    <CardBody>
-                      <div className="author">
-                        <CardTitle tag="h4">Sahil Mittal</CardTitle>
-                        <h6 className="card-category">Content Writer</h6>
+                      <CardBody>
+                        <div className="author">
+                          <CardTitle tag="h4">Simran Sohi</CardTitle>
+                          <h6 className="card-category">Content Writer</h6>
+                        </div>
+                      </CardBody>
+                      <CardFooter className="text-center">
+                        <Button
+                          className="btn-just-icon btn-neutral ml-1"
+                          color="link"
+                          href="https://www.instagram.com/sylhet.xo/"
+                        >
+                          <i className="fa fa-instagram" />
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </Col>
+                  <Col md="3">
+                    <Card className="card-profile card-plain">
+                      <div className="card-avatar">
+                        <img
+                          alt="..."
+                          src={require("assets/teamImages/Sahil Mittal.jpg")}
+                        />
                       </div>
-                    </CardBody>
-                    <CardFooter className="text-center">
-                      <Button
-                        className="btn-just-icon btn-neutral ml-1"
-                        color="link"
-                        href="https://www.instagram.com/sahil.121/"
-                      >
-                        <i className="fa fa-instagram" />
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </Col>
-                <Col md="3">
-                  <Card className="card-profile card-plain">
-                    <div className="card-avatar">
-                      <img
-                        alt="..."
-                        src={require("assets/teamImages/Ayushi Lakhanpal.jpg")}
-                      />
-                    </div>
-                    <CardBody>
-                      <div className="author">
-                        <CardTitle tag="h4">Ayushi Lakhanpal</CardTitle>
-                        <h6 className="card-category">Content Creator</h6>
+                      <CardBody>
+                        <div className="author">
+                          <CardTitle tag="h4">Sahil Mittal</CardTitle>
+                          <h6 className="card-category">Content Writer</h6>
+                        </div>
+                      </CardBody>
+                      <CardFooter className="text-center">
+                        <Button
+                          className="btn-just-icon btn-neutral ml-1"
+                          color="link"
+                          href="https://www.instagram.com/sahil.121/"
+                        >
+                          <i className="fa fa-instagram" />
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </Col>
+                  <Col md="3">
+                    <Card className="card-profile card-plain">
+                      <div className="card-avatar">
+                        <img
+                          alt="..."
+                          src={require("assets/teamImages/Ayushi Lakhanpal.jpg")}
+                        />
                       </div>
-                    </CardBody>
-                    <CardFooter className="text-center">
-                      <Button
-                        className="btn-just-icon btn-neutral ml-1"
-                        color="link"
-                        href="https://www.instagram.com/ayushi_lakhanpal/"
-                      >
-                        <i className="fa fa-instagram" />
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                </Col>
-              </Row>
-            ) : null}
-
+                      <CardBody>
+                        <div className="author">
+                          <CardTitle tag="h4">Ayushi Lakhanpal</CardTitle>
+                          <h6 className="card-category">Content Creator</h6>
+                        </div>
+                      </CardBody>
+                      <CardFooter className="text-center">
+                        <Button
+                          className="btn-just-icon btn-neutral ml-1"
+                          color="link"
+                          href="https://www.instagram.com/ayushi_lakhanpal/"
+                        >
+                          <i className="fa fa-instagram" />
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </Col>
+                </Row>
+                )
+              </>
+            </Fade>
             {/* Button to expand the div */}
             {expand ? (
               <Button
@@ -460,6 +468,7 @@ function LandingPage() {
           </Container>
         </div>
 
+        {/*Feedback Section */}
         <div className="section landing-section">
           <Container>
             <Row>

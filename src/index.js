@@ -18,10 +18,10 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/index" render={(props) => <Index {...props} />} />
-      <Route
+      {/* <Route
         path="/nucleo-icons"
         render={(props) => <NucleoIcons {...props} />}
-      />
+      /> */}
 
       <Route
         path="/profile-page"

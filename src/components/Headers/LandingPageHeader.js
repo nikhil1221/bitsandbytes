@@ -2,15 +2,15 @@ import React from "react";
 
 // reactstrap components
 import {
-  Card,
   Container,
-  Row,
-  Col,
-  Carousel,
-  Button,
-  CarouselItem,
-  CarouselIndicators,
-  CarouselCaption,
+  // Card,
+  // Row,
+  // Col,
+  // Carousel,
+  // Button,
+  // CarouselItem,
+  // CarouselIndicators,
+  // CarouselCaption,
 } from "reactstrap";
 // core components
 
@@ -52,17 +52,23 @@ function LandingPageHeader() {
   return (
     <>
       <div className="page-header" data-parallax={true} ref={pageHeader}>
-        <div
+        {/* Side Nav Bar */}
+        {/* <div
           style={{
             height: window.innerHeight,
             backgroundColor: "#fff",
             alignContent: "left",
             width: 100,
             position: "relative",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          <h1>Hello</h1>
-        </div>
+          <button style={{ border: "none", backgroundColor: "" }}>
+            <i className="fa fa-list-alt fa-3x" />
+          </button>
+        </div> */}
+
         <div className="filter" />
         <Container>
           <div className="motto text-center">
