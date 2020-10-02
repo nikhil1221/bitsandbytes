@@ -4,7 +4,7 @@ import React from "react";
 
 // core components
 
-function ProfilePageHeader() {
+function ProfilePageHeader({ headerImage }) {
   let pageHeader = React.createRef();
 
   React.useEffect(() => {

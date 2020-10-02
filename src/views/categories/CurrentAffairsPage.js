@@ -2,14 +2,25 @@ import React from "react";
 import { Container } from "reactstrap";
 
 // core components
-import ProfilePageHeader from "../../components/Headers/ProfilePageHeader";
+// import ProfilePageHeader from "../../components/Headers/ProfilePageHeader";
 import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar";
 
 function CurrentAffairsPage() {
   return (
     <>
       <ExamplesNavbar />
-      <ProfilePageHeader />
+      {/* <ProfilePageHeader /> */}
+      <div
+        style={{
+          backgroundImage:
+            "url(" + require("assets/Category-Header-Images/current.jpg") + ")",
+        }}
+        className="page-header page-header-xs"
+        data-parallax={true}
+        // ref={pageHeader}
+      >
+        <div className="filter" />
+      </div>
 
       <div className="section profile-content">
         <Container>

@@ -7,6 +7,8 @@ import {
   CardImgOverlay,
   CardText,
   Row,
+  Col,
+  Container,
 } from "reactstrap";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-router-dom";
@@ -67,54 +69,61 @@ function Categories() {
           justifyContent: "center",
         }}
       >
-        <Fade top>
-          <h1 style={{ color: "#fff" }}>Categories</h1>
-        </Fade>
-        <Row className="justify-content-md-center">
-          {data.map((data, key) => {
-            return (
-              <div
-                style={{
-                  margin: "0.5%",
-                  width: "30%",
-                  height: "100%",
-                  objectFit: "none",
-                }}
-              >
-                <Fade left>
-                  <div key={key}>
-                    <Link to={data.link}>
-                      <Card>
-                        <CardImg
-                          src={data.image}
-                          style={{
-                            width: 600,
-                            height: 350,
-                            borderRadius: 8,
-                          }}
-                        ></CardImg>
-                        {/* <CardBody>
+        <Container>
+          <Fade top>
+            <h1 style={{ color: "#fff", marginBottom: "2rem" }}>Categories</h1>
+          </Fade>
+          <Row className="justify-content-md-center">
+            {data.map((data, key) => {
+              return (
+                <Col lg="4" md="6" sm="6">
+                  <div
+                    style={{
+                      margin: "0.5%",
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "none",
+                    }}
+                  >
+                    <Fade left>
+                      <div key={key}>
+                        <Link to={data.link}>
+                          <Card>
+                            <CardImg
+                              src={data.image}
+                              style={{
+                                width: "100%",
+                                height: 300,
+                                borderRadius: 8,
+                              }}
+                            ></CardImg>
+                            {/* <CardBody>
                         <CardText >{data.name}</CardText>
                       </CardBody> */}
-                        <CardImgOverlay
-                          style={{
-                            color: "#fff",
-                            textDecorationStyle: "double",
-                            alignContent: "flex-end",
-                            objectFit: "cover",
-                            margin: 0,
-                          }}
-                        >
-                          <CardText>{data.name}</CardText>
-                        </CardImgOverlay>
-                      </Card>
-                    </Link>
+                            <CardImgOverlay
+                              style={{
+                                color: "#fff",
+                                textDecorationStyle: "double",
+                                alignContent: "flex-end",
+                                objectFit: "cover",
+                                margin: 0,
+                                backgroundColor: "rgba(0,0,0,0.35)",
+                              }}
+                            >
+                              {/* <CardText>{data.name}</CardText>
+                               */}
+                              <h2 style={{ fontWeight: "400" }}>{data.name}</h2>
+                            </CardImgOverlay>
+                          </Card>
+                        </Link>
+                      </div>
+                    </Fade>
                   </div>
-                </Fade>
-              </div>
-            );
-          })}
-        </Row>
+                </Col>
+              );
+            })}
+          </Row>
+        </Container>
       </div>
     </>
   );

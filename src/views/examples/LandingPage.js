@@ -119,7 +119,7 @@ function LandingPage() {
             </Pulse>
 
             <Row>
-              <Col md="3">
+              <Col lg="3" md="4" sm="6">
                 <Card className="card-profile card-plain">
                   <div className="card-avatar">
                     <img
@@ -151,7 +151,7 @@ function LandingPage() {
                   </CardFooter>
                 </Card>
               </Col>
-              <Col md="3">
+              <Col lg="3" md="4" sm="6">
                 <Card className="card-profile card-plain">
                   <div className="card-avatar">
                     <img
@@ -185,7 +185,7 @@ function LandingPage() {
                   </CardFooter>
                 </Card>
               </Col>
-              <Col md="3">
+              <Col lg="3" md="4" sm="6">
                 <Card className="card-profile card-plain">
                   <div className="card-avatar">
                     <img
@@ -217,7 +217,7 @@ function LandingPage() {
                   </CardFooter>
                 </Card>
               </Col>
-              <Col md="3">
+              <Col lg="3" md="4" sm="6">
                 <Card className="card-profile card-plain">
                   <div className="card-avatar">
                     <img
@@ -255,7 +255,7 @@ function LandingPage() {
               <>
                 {/* Row2 */}(
                 <Row>
-                  <Col md="3">
+                  <Col lg="3" md="4" sm="6">
                     <Card className="card-profile card-plain">
                       <div className="card-avatar">
                         <img
@@ -280,7 +280,7 @@ function LandingPage() {
                       </CardFooter>
                     </Card>
                   </Col>
-                  <Col md="3">
+                  <Col lg="3" md="4" sm="6">
                     <Card className="card-profile card-plain">
                       <div className="card-avatar">
                         <img
@@ -305,7 +305,7 @@ function LandingPage() {
                       </CardFooter>
                     </Card>
                   </Col>
-                  <Col md="3">
+                  <Col lg="3" md="4" sm="6">
                     <Card className="card-profile card-plain">
                       <div className="card-avatar">
                         <img
@@ -330,7 +330,7 @@ function LandingPage() {
                       </CardFooter>
                     </Card>
                   </Col>
-                  <Col md="3">
+                  <Col lg="3" md="4" sm="6">
                     <Card className="card-profile card-plain">
                       <div className="card-avatar">
                         <img
@@ -357,7 +357,7 @@ function LandingPage() {
                   </Col>
 
                   {/* Row 3 */}
-                  <Col md="3">
+                  <Col lg="3" md="4" sm="6">
                     <Card className="card-profile card-plain">
                       <div className="card-avatar">
                         <img
@@ -382,7 +382,7 @@ function LandingPage() {
                       </CardFooter>
                     </Card>
                   </Col>
-                  <Col md="3">
+                  <Col lg="3" md="4" sm="6">
                     <Card className="card-profile card-plain">
                       <div className="card-avatar">
                         <img
@@ -407,7 +407,7 @@ function LandingPage() {
                       </CardFooter>
                     </Card>
                   </Col>
-                  <Col md="3">
+                  <Col lg="3" md="4" sm="6">
                     <Card className="card-profile card-plain">
                       <div className="card-avatar">
                         <img

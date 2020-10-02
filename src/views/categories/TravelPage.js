@@ -4,14 +4,27 @@ import React from "react";
 import { Container } from "reactstrap";
 
 import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar";
-import ProfilePageHeader from "../../components/Headers/ProfilePageHeader";
+// import ProfilePageHeader from "../../components/Headers/ProfilePageHeader";
 
 function TravelPage() {
   return (
     <>
       {/* <h1>Travel Page</h1> */}
       <ExamplesNavbar />
-      <ProfilePageHeader />
+      {/* <ProfilePageHeader headerImage="Travel" />
+       */}
+
+      <div
+        style={{
+          backgroundImage:
+            "url(" + require("assets/Category-Header-Images/Travel.jpg") + ")",
+        }}
+        className="page-header page-header-xs"
+        data-parallax={true}
+        // ref={pageHeader}
+      >
+        <div className="filter" />
+      </div>
 
       <div className="section profile-content">
         <Container>
