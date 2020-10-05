@@ -26,6 +26,10 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import Categories from "components/Section/Categories";
+import SectionCarousel from "../index-sections/SectionCarousel";
+
+// Carousel Data
+import LandingPageCarouselData from "../../LandingPageCarouselData";
 
 function LandingPage() {
   document.documentElement.classList.remove("nav-open");
@@ -43,27 +47,13 @@ function LandingPage() {
 
   return (
     <>
-      <ExamplesNavbar />
-      <LandingPageHeader />
-      <Categories />
       <div className="main">
+        <ExamplesNavbar />
+        <LandingPageHeader />
+
+        {/* 3 basic info cards */}
         <div className="section text-center">
           <Container>
-            {/* <Row>
-              <Col className="ml-auto mr-auto" md="8">
-                <h2 className="title">What is Bits & Bytes ?</h2>
-                <h5 className="description">
-                  A fortnightly magazine startup by a group of youngsters,
-                  trying to motivate and inspire everyone we come across by
-                  presenting some of the real influencers among us, who have
-                  followed their hesitant dreams and ideas ridiculed by others
-                  to be where they are today.
-                </h5>
-                <br />
-              </Col>
-            </Row>
-            <br />
-            <br /> */}
             <Row>
               <Col md="4">
                 <div className="info">
@@ -111,6 +101,12 @@ function LandingPage() {
             </Row>
           </Container>
         </div>
+
+        {/* To display the category cards */}
+        <Categories />
+
+        {/* Carousel */}
+        <SectionCarousel items={LandingPageCarouselData} />
 
         {/* Our Team Section */}
         <div className="section section-dark text-center">

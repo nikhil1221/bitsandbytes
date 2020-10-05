@@ -1,8 +1,9 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Button } from "reactstrap";
+import { Container, Button, Col, Row } from "reactstrap";
 // core component
+
 import img from "assets/img/bruno-abatti.jpg";
 const items = [
   {
@@ -52,24 +53,17 @@ function LandingPageHeader() {
         <div className="filter" />
         <Container>
           {/* <UncontrolledCarousel items={items} /> */}
-          <div className="motto text-center">
-            <h1>Bits & Bytes.</h1>
-            <h3>
-              Trying to motivate and inspire everyone we come across, by
-              presenting some of the real influencers among us.
-            </h3>
-            <br />
-            {/* <Button
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-              className="btn-round mr-1"
-              color="neutral"
-              target="_blank"
-              outline
-            >
-              <i className="fa fa-play" />
-              Watch video
-            </Button> */}
-            <Button
+          <Row>
+            <Col lg="6" md="6" sm="12">
+              <div className="motto">
+                <h1>Bits & Bytes.</h1>
+                <h3>
+                  Trying to motivate and inspire everyone we come across, by
+                  presenting some of the real influencers among us.
+                </h3>
+                <br />
+
+                {/* <Button
               // implement scroll to next div
               onClick={window.scrollBy(0, 500)}
               className="btn-round"
@@ -86,8 +80,15 @@ function LandingPageHeader() {
               <div>
                 <i className="nc-icon nc-minimal-down" size="4x" />
               </div>
-            </Button>
-          </div>
+            </Button> */}
+              </div>
+            </Col>
+
+            {/* To showcase the recent blogs */}
+            <Col lg="6" md="6" sm="12">
+              {/* Show recent blog cards */}
+            </Col>
+          </Row>
         </Container>
       </div>
     </>

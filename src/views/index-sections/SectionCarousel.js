@@ -14,25 +14,8 @@ import {
 
 // core components
 
-const items = [
-  {
-    src: require("assets/img/soroush-karimi.jpg"),
-    altText: "Somewhere",
-    caption: "Somewhere",
-  },
-  {
-    src: require("assets/img/federico-beccari.jpg"),
-    altText: "Somewhere else",
-    caption: "Somewhere else",
-  },
-  {
-    src: require("assets/img/joshua-stannard.jpg"),
-    altText: "Here it is",
-    caption: "Here it is",
-  },
-];
-
-function SectionCarousel() {
+// items is the carousel data to display
+function SectionCarousel({ items }) {
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [animating, setAnimating] = React.useState(false);
   const onExiting = () => {
@@ -79,7 +62,7 @@ function SectionCarousel() {
                         onExited={onExited}
                         key={item.src}
                       >
-                        <img src={item.src} alt={item.altText} />
+                        <img src={item.src} />
                         <CarouselCaption
                           captionText={item.caption}
                           captionHeader=""

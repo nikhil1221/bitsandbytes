@@ -31,27 +31,19 @@ ReactDOM.render(
       /> */}
 
       {/* Path to categories */}
-      <Route
-        path="/travel-places"
-        render={(props) => <TravelPage {...props} />}
-      />
-      <Route
-        path="/fashion-style"
-        render={(props) => <FashionPage {...props} />}
-      />
-      <Route path="/art" render={(props) => <ArtPage {...props} />} />
+      <Route path="/travel" render={(props) => <TravelPage {...props} />} />
+      <Route path="/fashion" render={(props) => <FashionPage {...props} />} />
+      <Route path="/history" render={(props) => <ArtPage {...props} />} />
+      <Route path="/health" render={(props) => <HealthPage {...props} />} />
       <Route
         path="/entertainment"
         render={(props) => <EntertainmentPage {...props} />}
       />
       <Route
-        path="/current-affairs"
+        path="/quiz"
         render={(props) => <CurrentAffairsPage {...props} />}
       />
-      <Route
-        path="/health-fitness"
-        render={(props) => <HealthPage {...props} />}
-      />
+
       <Route
         path="/profile-page"
         render={(props) => <ProfilePage {...props} />}
