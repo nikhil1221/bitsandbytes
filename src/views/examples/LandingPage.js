@@ -40,6 +40,7 @@ function LandingPage() {
   const allMembers = () => {
     setExpand(!expand);
   };
+
   return (
     <>
       <ExamplesNavbar />

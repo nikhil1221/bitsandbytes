@@ -17,7 +17,11 @@ function CategoriesDropDown() {
           color="secondary"
           data-toggle="dropdown"
           id="dropdownMenuButton"
-          style={{ border: "none" }}
+          style={{
+            border: "none",
+            backgroundColor: "inherit",
+            color: "#9a9a9a",
+          }}
         >
           <i className="fa fa-list-alt" />
           <span> </span>

@@ -5,7 +5,7 @@ import { Container } from "reactstrap";
 
 import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar";
 // import ProfilePageHeader from "../../components/Headers/ProfilePageHeader";
-
+import DemoFooter from "../../components/Footers/DemoFooter.js";
 function TravelPage() {
   return (
     <>
@@ -44,6 +44,7 @@ function TravelPage() {
             </div>
           </div>
         </Container>
+        <DemoFooter />
       </div>
     </>
   );

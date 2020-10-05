@@ -4,7 +4,7 @@ import { Container } from "reactstrap";
 // core components
 // import ProfilePageHeader from "../../components/Headers/ProfilePageHeader";
 import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar";
-
+import DemoFooter from "../../components/Footers/DemoFooter.js";
 function HealthPage() {
   return (
     <>
@@ -40,6 +40,7 @@ function HealthPage() {
             </div>
           </div>
         </Container>
+        <DemoFooter />
       </div>
     </>
   );

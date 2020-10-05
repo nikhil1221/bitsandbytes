@@ -12,7 +12,7 @@ import {
   Nav,
   Container,
 } from "reactstrap";
-import CategoriesDropDown from "./CategoriesDropDown";
+// import CategoriesDropDown from "./CategoriesDropDown";
 
 function ExamplesNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
@@ -78,6 +78,7 @@ function ExamplesNavbar() {
           className="justify-content-end"
           navbar
           isOpen={navbarCollapse}
+          expand={true}
         >
           <Nav navbar>
             <NavItem>
@@ -85,14 +86,20 @@ function ExamplesNavbar() {
                 <i className="fa fa-home" /> Home
               </NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink href="" target="_blank">
                 <i className="fa fa-history" /> Recent
               </NavLink>
-            </NavItem>
+            </NavItem> */}
 
             <NavItem>
-              <CategoriesDropDown />
+              <NavLink
+                tag={Link}
+                // onClick={window.scrollTo(0, 500)}
+              >
+                <i className="fa fa-list-alt" />
+                Categories
+              </NavLink>
             </NavItem>
             <NavItem>
               <NavLink

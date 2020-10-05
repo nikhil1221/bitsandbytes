@@ -4,7 +4,7 @@ import { Container } from "reactstrap";
 // core components
 // import ProfilePageHeader from "../../components/Headers/ProfilePageHeader";
 import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar";
-
+import DemoFooter from "../../components/Footers/DemoFooter.js";
 function CurrentAffairsPage() {
   return (
     <>
@@ -39,6 +39,8 @@ function CurrentAffairsPage() {
               <h6 className="description">Demo</h6>
             </div>
           </div>
+
+          <DemoFooter />
         </Container>
       </div>
     </>

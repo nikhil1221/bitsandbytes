@@ -4,7 +4,8 @@ import { Container } from "reactstrap";
 // core components
 // import ProfilePageHeader from "../../components/Headers/ProfilePageHeader";
 import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar";
-
+import DemoFooter from "../../components/Footers/DemoFooter.js";
+import Blogsactivity from "components/Section/Blogsactivity";
 function ArtPage() {
   return (
     <>
@@ -38,7 +39,10 @@ function ArtPage() {
               </h4>
               <h6 className="description">Demo</h6>
             </div>
+
+            <Blogsactivity />
           </div>
+          <DemoFooter />
         </Container>
       </div>
     </>

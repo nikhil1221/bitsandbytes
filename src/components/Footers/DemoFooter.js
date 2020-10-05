@@ -5,10 +5,10 @@ import { Row, Container } from "reactstrap";
 
 function DemoFooter() {
   return (
-    <footer className="footer footer-black footer-white">
+    <footer className="footer footer-black">
       <Container>
         <Row>
-          <nav className="footer-nav ">
+          <nav className="footer-nav fixed">
             <ul>
               <li>
                 <a href="mailto:bitsandbytes.in@gmail.com" target="_blank">
