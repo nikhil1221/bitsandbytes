@@ -14,12 +14,10 @@ import ProfilePage from "views/examples/ProfilePage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 
 // Category Pages Import
-import TravelPage from "views/categories/TravelPage";
-import ArtPage from "views/categories/ArtPage";
-import FashionPage from "views/categories/FashionPage";
-import EntertainmentPage from "views/categories/EntertainmentPage";
-import CurrentAffairsPage from "views/categories/CurrentAffairsPage";
-import HealthPage from "views/categories/HealthPage";
+
+import BlogsMain from "views/categories/BlogsMain";
+import data from "./categoryData.js";
+// Art Blog Data
 
 ReactDOM.render(
   <BrowserRouter>
@@ -31,9 +29,36 @@ ReactDOM.render(
       /> */}
 
       {/* Path to categories */}
-      <Route path="/travel" render={(props) => <TravelPage {...props} />} />
+
+      {data.map((data, key) => (
+        <Route
+          key={key}
+          path={data.link}
+          render={(props) => (
+            <BlogsMain
+              input={data.blogs}
+              pagename={data.name}
+              backimage={data.backimage}
+              roundimage={data.circleimage}
+              {...props}
+            />
+          )}
+        />
+      ))}
+
+      {/* <Route path="/travel" render={(props) => <TravelPage {...props} />} />
       <Route path="/fashion" render={(props) => <FashionPage {...props} />} />
-      <Route path="/history" render={(props) => <ArtPage {...props} />} />
+      <Route
+        path="/art"
+        render={(props) => (
+          <BlogsMain
+            input={input}
+            pagename="Art"
+            backimage={imagebackart}
+            roundimage={roundart}
+          />
+        )}
+      />
       <Route path="/health" render={(props) => <HealthPage {...props} />} />
       <Route
         path="/entertainment"
@@ -42,7 +67,7 @@ ReactDOM.render(
       <Route
         path="/quiz"
         render={(props) => <CurrentAffairsPage {...props} />}
-      />
+      /> */}
 
       <Route
         path="/profile-page"

@@ -5,15 +5,18 @@ import { Container } from "reactstrap";
 // import ProfilePageHeader from "../../components/Headers/ProfilePageHeader";
 import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar";
 import DemoFooter from "../../components/Footers/DemoFooter.js";
-function FashionPage() {
+import Blogsactivity from "components/Section/Blogsactivity";
+
+function BlogsMain({ input, pagename, backimage, roundimage }) {
   return (
     <>
       <ExamplesNavbar />
       {/* <ProfilePageHeader /> */}
+
+      {/* To display the page header image */}
       <div
         style={{
-          backgroundImage:
-            "url(" + require("assets/Category-Header-Images/fashion.jpg") + ")",
+          backgroundImage: "url(" + backimage + ")",
         }}
         className="page-header page-header-xs"
         data-parallax={true}
@@ -29,21 +32,22 @@ function FashionPage() {
               <img
                 alt="..."
                 className="img-circle img-no-padding img-responsive"
-                src={require("assets/img/faces/joe-gardner-2.jpg")}
+                src={roundimage}
               />
             </div>
             <div className="name">
               <h4 className="title">
-                Fashion Page <br />
+                {pagename}
+                <br />
               </h4>
-              <h6 className="description">Demo</h6>
             </div>
           </div>
+          <Blogsactivity blogsData={input} />
+          <DemoFooter />
         </Container>
-        <DemoFooter />
       </div>
     </>
   );
 }
 
-export default FashionPage;
+export default BlogsMain;

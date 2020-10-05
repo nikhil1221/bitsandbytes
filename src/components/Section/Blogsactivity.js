@@ -85,6 +85,7 @@ function Blogsactivity({ blogsData }) {
                     <CardText style={{ textAlign: "left", marginTop: "12px" }}>
                       {/* {{var obj=JSON.parse(data.text)}} */}
                       {data.text.substr(0, 40)}
+                      &nbsp;.....
                     </CardText>
                     <CardText className="text-left">
                       <small className="text-muted">{data.date}</small>
