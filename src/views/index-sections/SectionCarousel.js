@@ -63,10 +63,12 @@ function SectionCarousel({ items }) {
                         key={item.src}
                       >
                         <img src={item.src} />
-                        <CarouselCaption
-                          captionText={item.caption}
-                          captionHeader=""
-                        />
+                        {item.caption ? (
+                          <CarouselCaption
+                            captionText={item.caption}
+                            captionHeader=""
+                          />
+                        ) : null}
                       </CarouselItem>
                     );
                   })}

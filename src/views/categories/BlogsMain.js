@@ -7,7 +7,9 @@ import ExamplesNavbar from "../../components/Navbars/ExamplesNavbar";
 import DemoFooter from "../../components/Footers/DemoFooter.js";
 import Blogsactivity from "components/Section/Blogsactivity";
 
-function BlogsMain({ input, pagename, backimage, roundimage }) {
+import SectionCarousel from "../index-sections/SectionCarousel";
+
+function BlogsMain({ input, pagename, backimage, roundimage, carouselData }) {
   return (
     <>
       <ExamplesNavbar />
@@ -42,7 +44,13 @@ function BlogsMain({ input, pagename, backimage, roundimage }) {
               </h4>
             </div>
           </div>
+
+          {/* Blog Cards */}
           <Blogsactivity blogsData={input} />
+
+          {/* Carousel Display on each category page */}
+          <SectionCarousel items={carouselData} />
+
           <DemoFooter />
         </Container>
       </div>

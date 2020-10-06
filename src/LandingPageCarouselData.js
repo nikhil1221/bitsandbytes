@@ -1,7 +1,6 @@
 const carouselData = [
   {
     src: require("assets/img/soroush-karimi.jpg"),
-
     caption: "Vienna",
   },
   {

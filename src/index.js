@@ -17,7 +17,8 @@ import RegisterPage from "views/examples/RegisterPage.js";
 
 import BlogsMain from "views/categories/BlogsMain";
 import data from "./categoryData.js";
-// Art Blog Data
+
+import LandingPageCarouselData from "./LandingPageCarouselData";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -40,6 +41,7 @@ ReactDOM.render(
               pagename={data.name}
               backimage={data.backimage}
               roundimage={data.circleimage}
+              carouselData={LandingPageCarouselData}
               {...props}
             />
           )}
