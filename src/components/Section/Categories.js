@@ -9,6 +9,10 @@ import data from "../../categoryData";
 
 function Categories() {
   const [expand, setExpand] = useState(false);
+ 
+
+
+
 
   const showAllCards = () => {
     setExpand(!expand);
@@ -24,7 +28,9 @@ function Categories() {
     >
       <Container>
         <Fade top>
-          <h1 style={{ color: "#fff", marginBottom: "2rem" }}>Categories</h1>
+          <h1 style={{ color: "#fff", marginBottom: "2rem", marginTop: 0 }}>
+            Categories
+          </h1>
         </Fade>
 
         <Row className="justify-content-md-center">
@@ -33,13 +39,14 @@ function Categories() {
               /* Displaying a single card from the data array */
             }
             return (
-              <Col lg="4" md="6" sm="6">
+              <Col lg="4" md="6" sm="2" className="ml-auto mr-auto">
                 <div
                   style={{
                     margin: "0.5%",
                     width: "100%",
                     height: "100%",
                     objectFit: "none",
+                    alignItems: "center",
                   }}
                 >
                   {/* <Fade left> */}

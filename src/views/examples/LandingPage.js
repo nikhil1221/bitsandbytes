@@ -27,10 +27,9 @@ import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import DemoFooter from "components/Footers/DemoFooter.js";
 import Categories from "components/Section/Categories";
 import SectionCarousel from "../index-sections/SectionCarousel";
-
+import InfoMain from "../../components/Section/InfoMain.js";
 // Carousel Data
 import LandingPageCarouselData from "../../LandingPageCarouselData";
-
 function LandingPage() {
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
@@ -52,55 +51,7 @@ function LandingPage() {
         <LandingPageHeader />
 
         {/* 3 basic info cards */}
-        <div className="section text-center">
-          <Container>
-            <Row>
-              <Col md="4">
-                <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-book-bookmark" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Blogs</h4>
-                    <p className="description">
-                      Spend your time reading our informative blogs about fields
-                      of your choice.
-                    </p>
-                  </div>
-                </div>
-              </Col>
-              <Col md="4">
-                <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-bulb-63" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">New Ideas</h4>
-                    <p>
-                      Aware yourself with new ideas presented by some of the
-                      real influencers among us.
-                    </p>
-                  </div>
-                </div>
-              </Col>
-
-              <Col md="4">
-                <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-bag-16" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">E- Magazine</h4>
-                    <p>
-                      Get access to our unique and creatively designed
-                      E-magazine issues.
-                    </p>
-                  </div>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+        <InfoMain />
 
         {/* To display the category cards */}
         <Categories />
@@ -472,7 +423,9 @@ function LandingPage() {
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
-                <h2 className="text-center">Keep in touch?</h2>
+                <Fade top>
+                  <h2 className="text-center">Keep in touch?</h2>
+                </Fade>
                 <Form className="contact-form">
                   <Row>
                     <Col md="6">

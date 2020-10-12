@@ -13,7 +13,7 @@ import {
 } from "reactstrap";
 
 // core components
-
+import Fade from "react-reveal/Fade";
 // items is the carousel data to display
 function SectionCarousel({ items }) {
   const [activeIndex, setActiveIndex] = React.useState(0);
@@ -41,6 +41,14 @@ function SectionCarousel({ items }) {
   return (
     <>
       <div className="section pt-o" id="carousel">
+        <Fade top>
+          <h1
+            className="text-center"
+            style={{ marginBottom: "2rem", marginTop: 0 }}
+          >
+            Gallery
+          </h1>
+        </Fade>
         <Container>
           <Row>
             <Col className="ml-auto mr-auto" md="8">

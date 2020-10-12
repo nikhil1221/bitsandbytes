@@ -116,7 +116,6 @@ function ExamplesNavbar() {
               <NavLink
                 data-placement="bottom"
                 href="/register-page"
-                target="_blank"
                 title="Login Signup"
               >
                 <i className="fa fa-user" />

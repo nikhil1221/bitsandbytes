@@ -20,6 +20,44 @@ import data from "./categoryData.js";
 
 import LandingPageCarouselData from "./LandingPageCarouselData";
 
+import firebase from "./firebase";
+
+import {
+    travelBlogs,
+    fashionBlogs,
+    historyBlogs,
+    entertainmentBlogs,
+    healthBlogs,
+    quizBlogs,
+    horoscopeBlogs,
+    lifestyleBlogs,
+    weddingBlogs,
+    technologyBlogs,
+    covidBlogs,
+    careerBlogs,
+    foodBlogs,
+  } from "./blogData";
+  
+
+
+
+firebase.firestore().collection("Categories").add(
+    {
+        id: 1,
+        name: "Unpredictable Utopia",
+        image:
+          "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80",
+    
+        link: "/travel",
+        backimage: require("assets/Category-Header-Images/Travel.jpg"),
+        circleimage: require("assets/img/faces/joe-gardner-2.jpg"),
+        blogs: travelBlogs,
+      },
+     
+)
+
+
+
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
@@ -48,33 +86,10 @@ ReactDOM.render(
         />
       ))}
 
-      {/* <Route path="/travel" render={(props) => <TravelPage {...props} />} />
-      <Route path="/fashion" render={(props) => <FashionPage {...props} />} />
-      <Route
-        path="/art"
-        render={(props) => (
-          <BlogsMain
-            input={input}
-            pagename="Art"
-            backimage={imagebackart}
-            roundimage={roundart}
-          />
-        )}
-      />
-      <Route path="/health" render={(props) => <HealthPage {...props} />} />
-      <Route
-        path="/entertainment"
-        render={(props) => <EntertainmentPage {...props} />}
-      />
-      <Route
-        path="/quiz"
-        render={(props) => <CurrentAffairsPage {...props} />}
-      /> */}
-
-      <Route
+      {/* <Route
         path="/profile-page"
         render={(props) => <ProfilePage {...props} />}
-      />
+      /> */}
       <Route
         path="/register-page"
         render={(props) => <RegisterPage {...props} />}

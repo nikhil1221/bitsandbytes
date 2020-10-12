@@ -1,51 +1,33 @@
 import React from "react";
 
 // reactstrap components
-import { Container, Button, Col, Row } from "reactstrap";
+import { Container, Col, Row } from "reactstrap";
 // core component
 
 import img from "assets/img/bruno-abatti.jpg";
-const items = [
-  {
-    src: require("assets/img/soroush-karimi.jpg"),
-    altText: "Somewhere",
-    caption: "Somewhere",
-  },
-  {
-    src: require("assets/img/federico-beccari.jpg"),
-    altText: "Somewhere else",
-    caption: "Somewhere else",
-  },
-  {
-    src: require("assets/img/joshua-stannard.jpg"),
-    altText: "Here it is",
-    caption: "Here it is",
-  },
-];
 
 function LandingPageHeader() {
-  let pageHeader = React.createRef();
+  // let pageHeader = React.createRef();
 
-  React.useEffect(() => {
-    if (window.innerWidth < 991) {
-      const updateScroll = () => {
-        let windowScrollTop = window.pageYOffset / 3;
-        pageHeader.current.style.transform =
-          "translate3d(0," + windowScrollTop + "px,0)";
-      };
-      window.addEventListener("scroll", updateScroll);
-      return function cleanup() {
-        window.removeEventListener("scroll", updateScroll);
-      };
-    }
-  });
+  // React.useEffect(() => {
+  //   if (window.innerWidth < 991) {
+  //     const updateScroll = () => {
+  //       let windowScrollTop = window.pageYOffset / 3;
+  //       pageHeader.current.style.transform =
+  //         "translate3d(0," + windowScrollTop + "px,0)";
+  //     };
+  //     window.addEventListener("scroll", updateScroll);
+  //     return function cleanup() {
+  //       window.removeEventListener("scroll", updateScroll);
+  //     };
+  //   }
+  // });
 
   return (
     <>
       <div
         className="page-header"
-        data-parallax={true}
-        ref={pageHeader}
+        // ref={pageHeader}
         style={{
           backgroundImage: `url(${img})`,
         }}
