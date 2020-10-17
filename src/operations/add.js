@@ -15,9 +15,14 @@ function add(title,image,backimage,circleimage,link,type)
         type:type,
    }
 
-   var post=database.ref().child("categories").push().key();
+   // var post=database.ref().child("categories").push().key();
+   var post = database.ref().child("blog").get();
+
    var updates={};
+
    updates[link]=postdata;
+
+
    return database.ref().update(updates);
 }
 
