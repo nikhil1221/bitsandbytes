@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 
 //animation library react reveal
 import Fade from "react-reveal/Fade";
 import Pulse from "react-reveal/Pulse";
+
 
 // reactstrap components
 import {
@@ -30,7 +31,18 @@ import SectionCarousel from "../index-sections/SectionCarousel";
 import InfoMain from "../../components/Section/InfoMain.js";
 // Carousel Data
 import LandingPageCarouselData from "../../LandingPageCarouselData";
+import RetrieveData from "../../RetrieveData.js";
+
+
+
+
+
 function LandingPage() {
+
+
+  // const {handleSignup} = useContext(firebaseAuth);
+  // console.log(handleSignup);
+
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -49,16 +61,16 @@ function LandingPage() {
       <div className="main">
         <ExamplesNavbar />
         <LandingPageHeader />
-
+        {/* <RetrieveData/> */}
         {/* 3 basic info cards */}
         <InfoMain />
-
+      
         {/* To display the category cards */}
         <Categories />
 
         {/* Carousel */}
         <SectionCarousel items={LandingPageCarouselData} />
-
+        
         {/* Our Team Section */}
         <div className="section section-dark text-center">
           <Container>

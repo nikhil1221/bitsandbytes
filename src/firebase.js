@@ -1,10 +1,6 @@
-import * as firebase from 'firebase';
-import firestore from 'firebase/firestore'
+import * as firebase from "firebase";
 
-const settings = {timestampsInSnapshots: true};
-
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const config = {
+const firebaseConfig = {
     apiKey: "AIzaSyDOTQyJXGJoHhMXwesi2CSFGNMRMqIK0YY",
     authDomain: "blogbitsandbytes.firebaseapp.com",
     databaseURL: "https://blogbitsandbytes.firebaseio.com",
@@ -15,9 +11,6 @@ const config = {
     measurementId: "G-EQT3ST6KT4"
   };
 
+  firebase.initializeApp(firebaseConfig);
 
-  firebase.initializeApp(config);
-
-firebase.firestore().settings(settings);
-
-export default firebase;
+  export default firebase;

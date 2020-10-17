@@ -22,7 +22,7 @@ const data = [
       "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80",
 
     link: "/travel",
-    backimage: require("assets/Category-Header-Images/Travel.jpg"),
+    backimage: require("assets/Category-Header-Images/BackgorundTravel.jpg"),
     circleimage: require("assets/img/faces/joe-gardner-2.jpg"),
     blogs: travelBlogs,
   },

@@ -17,58 +17,19 @@ import RegisterPage from "views/examples/RegisterPage.js";
 
 import BlogsMain from "views/categories/BlogsMain";
 import data from "./categoryData.js";
-
+import Login from"./views/examples/Login";
 import LandingPageCarouselData from "./LandingPageCarouselData";
 
-import firebase from "./firebase";
-
-import {
-    travelBlogs,
-    fashionBlogs,
-    historyBlogs,
-    entertainmentBlogs,
-    healthBlogs,
-    quizBlogs,
-    horoscopeBlogs,
-    lifestyleBlogs,
-    weddingBlogs,
-    technologyBlogs,
-    covidBlogs,
-    careerBlogs,
-    foodBlogs,
-  } from "./blogData";
-  
-
-
-
-firebase.firestore().collection("Categories").add(
-    {
-        id: 1,
-        name: "Unpredictable Utopia",
-        image:
-          "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80",
-    
-        link: "/travel",
-        backimage: require("assets/Category-Header-Images/Travel.jpg"),
-        circleimage: require("assets/img/faces/joe-gardner-2.jpg"),
-        blogs: travelBlogs,
-      },
-     
-)
-
-
-
 ReactDOM.render(
+ 
   <BrowserRouter>
     <Switch>
-      <Route path="/index" render={(props) => <Index {...props} />} />
-      {/* <Route
-        path="/nucleo-icons"
-        render={(props) => <NucleoIcons {...props} />}
-      /> */}
-
-      {/* Path to categories */}
-
+    
+    
+    <Route path="/login" render={(props)=> <Login {...props}/>} /> 
+      
+  <Route path="/index" render={(props) => <Index {...props} />} />
+    
       {data.map((data, key) => (
         <Route
           key={key}
@@ -90,12 +51,13 @@ ReactDOM.render(
         path="/profile-page"
         render={(props) => <ProfilePage {...props} />}
       /> */}
-      <Route
+      {/* <Route
         path="/register-page"
         render={(props) => <RegisterPage {...props} />}
-      />
+      /> */}
       <Redirect to="/index" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
+ 
 );
