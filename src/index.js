@@ -14,6 +14,7 @@ import Index from "./views/examples/LandingPage"
 
 // Category Page Component import
 import BlogsMain from "views/categories/BlogsMain";
+<<<<<<< HEAD
 // Getting all the data about each individual category from firebase
 import getCategoryData from "categoryData";
 import ScrollToTop from "../src/components/ScrollToTop";
@@ -59,10 +60,28 @@ getCategoryData((fetchedData)=>{
         {/* Index Route */}
         <Route path="/index" render={(props) => <Index {...props} />} />
 
+=======
+import data from "./categoryData.js";
+import Login from"./views/examples/Login";
+import LandingPageCarouselData from "./LandingPageCarouselData";
+
+ReactDOM.render(
+ 
+  <BrowserRouter>
+    <Switch>
+    
+    
+    <Route path="/login" render={(props)=> <Login {...props}/>} /> 
+      
+  <Route path="/index" render={(props) => <Index {...props} />} />
+    
+      {data.map((data, key) => (
+>>>>>>> 4b6b7f6c91053dc059910dcd6bd442155bb72e6b
         <Route
           path="/register-page"
           render={(props) => <RegisterPage {...props} />}
         />
+<<<<<<< HEAD
         <Redirect to="/index" />
 
       </Switch>
@@ -72,3 +91,21 @@ getCategoryData((fetchedData)=>{
   );
 
 })
+=======
+      ))}
+
+      {/* <Route
+        path="/profile-page"
+        render={(props) => <ProfilePage {...props} />}
+      /> */}
+      {/* <Route
+        path="/register-page"
+        render={(props) => <RegisterPage {...props} />}
+      /> */}
+      <Redirect to="/index" />
+    </Switch>
+  </BrowserRouter>,
+  document.getElementById("root")
+ 
+);
+>>>>>>> 4b6b7f6c91053dc059910dcd6bd442155bb72e6b

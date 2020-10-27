@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 
 //animation library react reveal
 import Fade from "react-reveal/Fade";
 import Pulse from "react-reveal/Pulse";
+
 
 // reactstrap components
 import {
@@ -24,6 +25,7 @@ import DemoFooter from "components/Footers/DemoFooter.js";
 import Categories from "components/Section/Categories";
 import SectionCarousel from "../index-sections/SectionCarousel";
 import InfoMain from "../../components/Section/InfoMain.js";
+<<<<<<< HEAD
 
 
 // Firebase
@@ -31,11 +33,26 @@ import firebase from "../../firebase"
 
 import TeamMemberCard from "components/TeamMemberCard"
 import teamMembers from "../../components/OurTeam"
+=======
+// Carousel Data
+import LandingPageCarouselData from "../../LandingPageCarouselData";
+import RetrieveData from "../../RetrieveData.js";
+
+
+>>>>>>> 4b6b7f6c91053dc059910dcd6bd442155bb72e6b
 
 
 
 function LandingPage() {
+<<<<<<< HEAD
   
+=======
+
+
+  // const {handleSignup} = useContext(firebaseAuth);
+  // console.log(handleSignup);
+
+>>>>>>> 4b6b7f6c91053dc059910dcd6bd442155bb72e6b
   document.documentElement.classList.remove("nav-open");
 
   const [carouselData,setCarouseldata]=useState([]);
@@ -87,17 +104,22 @@ function LandingPage() {
       <div className="main"  >
         <ExamplesNavbar />
         <LandingPageHeader />
-
+        {/* <RetrieveData/> */}
         {/* 3 basic info cards */}
         <InfoMain />
-
+      
         {/* To display the category cards */}
       
         <Categories  />
      
         {/* Carousel */}
+<<<<<<< HEAD
         <SectionCarousel data={carouselData} />
 
+=======
+        <SectionCarousel items={LandingPageCarouselData} />
+        
+>>>>>>> 4b6b7f6c91053dc059910dcd6bd442155bb72e6b
         {/* Our Team Section */}
         <div className="section section-dark text-center">
 
