@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import classnames from "classnames";
 
 import {
@@ -44,6 +43,14 @@ function ExamplesNavbar() {
       window.removeEventListener("scroll", updateNavbarColor);
     };
   });
+ const handleEvent=()=>{
+    window.scrollTo(0,0);
+  }
+  const handleCategory=()=>{
+   
+
+    window.scrollTo(0,window.innerHeight*1.35);
+  }
   return (
     <Navbar
       className={classnames("fixed-top", navbarColor)}
@@ -55,7 +62,6 @@ function ExamplesNavbar() {
           <NavbarBrand
             data-placement="bottom"
             to="/index"
-            target="_blank"
             title="Company name"
             tag={Link}
           >
@@ -81,47 +87,57 @@ function ExamplesNavbar() {
           expand={true}
         >
           <Nav navbar>
-            <NavItem>
-              <NavLink to="/index" tag={Link}>
+            <NavItem >
+              <NavLink to="/index" tag={Link} onClick={handleEvent}>
                 <i className="fa fa-home" /> Home
               </NavLink>
             </NavItem>
-            {/* <NavItem>
-              <NavLink href="" target="_blank">
-                <i className="fa fa-history" /> Recent
-              </NavLink>
-            </NavItem> */}
+           
 
             <NavItem>
               <NavLink
-                tag={Link}
-                // onClick={window.scrollTo(0, 500)}
+              to="/index"
+              tag={Link}
+              onClick={handleCategory}
               >
                 <i className="fa fa-list-alt" />
                 Categories
               </NavLink>
             </NavItem>
+
+
             <NavItem>
               <NavLink
-                data-placement="bottom"
-                href=""
-                target="_blank"
-                title="Buy"
-              >
-                <i className="fa fa-shopping-cart" />
-                Buy
-              </NavLink>
+                  data-placement="bottom"
+                  href="/magazine"
+                  data-toggle="tooltip" 
+                  title="Watch our Latest Magazine"
+
+                >
+                
+                  <i className="fa fa-book"  />
+                  Our Magazine
+                </NavLink>
             </NavItem>
-            <NavItem>
+
+
+
+            <NavItem >
               <NavLink
                 data-placement="bottom"
-                href="/register-page"
-                title="Login Signup"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScvhFtDIx27k8bQgSjTeDOjpwA0Y5fHFWitrcftHo4fU-TLEg/viewform"
+                data-toggle="tooltip" 
+                title="Buy Now Our Subscription to see Exclusive Magazine"
+                target = "_blank"
+
               >
-                <i className="fa fa-user" />
-                Login/Signup
+                <i className="fa fa-shopping-cart"  />
+               Subscribe
               </NavLink>
             </NavItem>
+
+
+
           </Nav>
         </Collapse>
       </Container>

@@ -1,7 +1,5 @@
 import * as firebase from 'firebase';
-import firestore from 'firebase/firestore'
 
-const settings = {timestampsInSnapshots: true};
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const config = {
@@ -16,8 +14,7 @@ const config = {
   };
 
 
-  firebase.initializeApp(config);
+firebase.initializeApp(config);
 
-firebase.firestore().settings(settings);
 
 export default firebase;
